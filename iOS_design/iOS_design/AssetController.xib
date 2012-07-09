@@ -72,28 +72,12 @@
 							</object>
 						</array>
 					</object>
-					<object class="IBUIImageView" id="987348015">
-						<reference key="NSNextResponder" ref="841099712"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{300, 207}, {40, 46}}</string>
-						<reference key="NSSuperview" ref="841099712"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="433283346"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<reference key="IBUIGestureRecognizers" ref="0"/>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">grip.png</string>
-						</object>
-					</object>
 					<object class="IBUILabel" id="433283346">
 						<reference key="NSNextResponder" ref="841099712"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{0, 439}, {42, 21}}</string>
 						<reference key="NSSuperview" ref="841099712"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -145,24 +129,6 @@
 					<int key="connectionID">26</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">expandGrip</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="987348015"/>
-					</object>
-					<int key="connectionID">41</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
-						<string key="label">gestureRecognizers</string>
-						<reference key="source" ref="987348015"/>
-						<reference key="destination" ref="221036504"/>
-						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
-						<bool key="addsContentToExistingCollection">YES</bool>
-					</object>
-					<int key="connectionID">39</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
 						<string key="label">gestureRecognizers</string>
 						<reference key="source" ref="402189150"/>
@@ -198,14 +164,6 @@
 					</object>
 					<int key="connectionID">34</int>
 				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">handleGrip:</string>
-						<reference key="source" ref="221036504"/>
-						<reference key="destination" ref="372490531"/>
-					</object>
-					<int key="connectionID">40</int>
-				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -232,7 +190,6 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="890593226"/>
 							<reference ref="402189150"/>
-							<reference ref="987348015"/>
 							<reference ref="433283346"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -276,11 +233,6 @@
 						<reference key="object" ref="433283346"/>
 						<reference key="parent" ref="841099712"/>
 					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">16</int>
-						<reference key="object" ref="987348015"/>
-						<reference key="parent" ref="841099712"/>
-					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -289,7 +241,6 @@
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="16.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="20.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="21.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="22.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -323,17 +274,20 @@
 							<string key="candidateClassName">UIPanGestureRecognizer</string>
 						</object>
 					</dictionary>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">view</string>
-						<string key="NS.object.0">UIView</string>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">view</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="expandGrip">UIImageView</string>
+						<string key="view">UIView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="expandGrip">
+							<string key="name">expandGrip</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="view">
 							<string key="name">view</string>
 							<string key="candidateClassName">UIView</string>
 						</object>
-					</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/AssetController.h</string>
@@ -349,10 +303,10 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="grip.png">{40, 46}</string>
-			<string key="switch-(off).png">{79, 28}</string>
-		</dictionary>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">switch-(off).png</string>
+			<string key="NS.object.0">{79, 28}</string>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">1181</string>
 	</data>
 </archive>

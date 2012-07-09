@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface AssetController : UIView  {
-    UIImageView *expandGrip;
+//    UIImageView *expandGrip;
     UIView *view;
 }
 
-@property (nonatomic, strong) IBOutlet UIImageView *expandGrip;
+//@property (nonatomic, strong) IBOutlet UIImageView *expandGrip;
 @property (nonatomic, strong) IBOutlet UIView *view;
 
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
